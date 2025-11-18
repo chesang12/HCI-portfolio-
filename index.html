@@ -6,158 +6,273 @@
 <title>Rushwi Arelli | HCI Portfolio</title>
 
 <style>
-/* -------------------- GLOBAL -------------------- */
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(to right, #c3a3ff, #7a3df0, #1c0131);
-  color: white;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
+  /* ---------- GENERAL STYLING ---------- */
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #d5b3ff, #6a1b9a, #000000);
+    color: white;
+    text-align: center;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
 
-h2 {
-  text-decoration: underline;
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
+  h1, h2, h3 {
+    margin: 0;
+  }
 
-/* -------------------- HERO SECTION -------------------- */
-#hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
+  /* ---------- HEADER ---------- */
+  header {
+    padding: 80px 20px 60px;
+  }
 
-#hero h1 {
-  font-size: 3.2rem;
-  margin-bottom: 10px;
-  animation: fadeIn 1.5s ease-in-out;
-}
+  h1 {
+    font-size: 3.3rem;
+    font-weight: 700;
+  }
 
-#hero p {
-  font-size: 1.3rem;
-  opacity: 0.9;
-  margin-bottom: 40px;
-}
+  p.subtitle {
+    font-size: 1.4rem;
+    margin: 10px 0 20px;
+  }
 
-/* -------------------- MENU BUBBLES -------------------- */
-.menu-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  nav {
+    margin-top: 25px;
+  }
 
-.menu-bubble {
-  width: 150px;
-  height: 150px;
-  background: rgba(255, 255, 255, 0.18);
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: 0.3s;
-  animation: floatUp 1.5s ease forwards;
-  opacity: 0;
-}
+  nav a {
+    text-decoration: none;
+    color: white;
+    background: rgba(255,255,255,0.18);
+    padding: 12px 25px;
+    margin: 0 8px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: 0.3s;
+  }
 
-.menu-bubble:nth-child(1) { animation-delay: 0.4s; }
-.menu-bubble:nth-child(2) { animation-delay: 0.6s; }
-.menu-bubble:nth-child(3) { animation-delay: 0.8s; }
-.menu-bubble:nth-child(4) { animation-delay: 1s; }
+  nav a:hover {
+    background: rgba(255,255,255,0.35);
+  }
 
-.menu-bubble:hover {
-  transform: scale(1.07);
-  background: rgba(255, 255, 255, 0.28);
-}
+  /* ---------- SECTION STYLING ---------- */
+  section {
+    width: 75%;
+    max-width: 800px;
+    margin: 60px auto;
+    background: rgba(255,255,255,0.10);
+    padding: 30px;
+    border-radius: 15px;
+    animation: fadeIn 1.2s ease;
+    text-align: left;
+  }
 
-/* -------------------- SECTIONS -------------------- */
-.section {
-  padding: 60px 20px;
-  min-height: 50vh;
-  max-width: 900px;
-  margin: auto;
-  background: rgba(255,255,255,0.12);
-  border-radius: 12px;
-  margin-bottom: 50px;
-  backdrop-filter: blur(6px);
-}
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
 
-/* Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes floatUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  section p, li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  /* ---------- SKILLS COLUMNS ---------- */
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 15px;
+  }
+
+  .skills-container h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  ul {
+    margin-top: 0;
+    padding-left: 20px;
+  }
+
+  /* ---------- TIMELINE ---------- */
+  .timeline {
+    border-left: 3px solid white;
+    padding-left: 25px;
+    margin-top: 20px;
+  }
+
+  .timeline-item {
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  .timeline-item::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: -32px;
+    top: 5px;
+  }
+
+  .year {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .exp-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 3px;
+  }
+
+  /* ---------- CONTACT SECTION ---------- */
+  .profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .contact-icons a {
+    margin-right: 15px;
+    font-size: 1.7rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 40px;
+  }
+
+  /* ---------- ANIMATIONS ---------- */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 </style>
 
 </head>
+
 <body>
 
-<!-- -------------------- HERO -------------------- -->
-<section id="hero">
+<header>
   <h1>Rushwi Arelli</h1>
-  <p>Welcome to my Human-Computer Interaction Portfolio!</p>
+  <p class="subtitle">Welcome to my Human–Computer Interaction Portfolio!</p>
 
-  <div class="menu-container">
-    <a href="#about" class="menu-bubble">About Me</a>
-    <a href="#skills" class="menu-bubble">Skills</a>
-    <a href="#experience" class="menu-bubble">Experience</a>
-    <a href="#contact" class="menu-bubble">Contact</a>
-  </div>
-</section>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<!-- -------------------- ABOUT -------------------- -->
-<section id="about" class="section">
+<!-- -------- ABOUT -------- -->
+<section id="about">
   <h2>About Me</h2>
   <p>
-    I'm a computer scientist passionate about designing intuitive, user-centered digital experiences.
+    I'm a passionate computer scientist focused on creating intuitive, user-centered digital experiences.
+    I love combining creativity with logic to design products that feel effortless and engaging.
   </p>
 </section>
 
-<!-- -------------------- SKILLS -------------------- -->
-<section id="skills" class="section">
+<!-- -------- SKILLS -------- -->
+<section id="skills">
   <h2>Skills</h2>
-  <ul>
-    <li>Programming: Python, JavaScript, Java</li>
-    <li>Frontend: HTML, CSS, React</li>
-    <li>Design Tools: Figma, Adobe XD</li>
-    <li>Version Control: Git & GitHub</li>
-  </ul>
+
+  <div class="skills-container">
+    <div>
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>Python</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Figma & UI Prototyping</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Problem Solving</li>
+        <li>Communication</li>
+        <li>Team Collaboration</li>
+        <li>Time Management</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<!-- -------------------- EXPERIENCE -------------------- -->
-<section id="experience" class="section">
+<!-- -------- EXPERIENCE / TIMELINE -------- -->
+<section id="experience">
   <h2>Experience</h2>
-  <ul>
-    <li>Built responsive web interfaces focusing on usability and accessibility.</li>
-    <li>Designed interactive prototypes in Figma for various user workflows.</li>
-    <li>Developed small web apps demonstrating UI principles and visual hierarchy.</li>
-  </ul>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="year">2019–2020</div>
+      <div class="exp-title">Foundation Project</div>
+      <p>Explored early UX principles and basic programming fundamentals.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="year">2020–2022</div>
+      <div class="exp-title">Project One</div>
+      <p>Built a small interactive interface as part of a mock product design process.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="year">2022–2023</div>
+      <div class="exp-title">Project Two</div>
+      <p>Worked on improving usability and accessibility in prototype screens.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="year">2023–Present</div>
+      <div class="exp-title">Ongoing HCI Work</div>
+      <p>Continuously exploring design methods, prototyping workflows, and user research techniques.</p>
+    </div>
+
+  </div>
 </section>
 
-<!-- -------------------- CONTACT -------------------- -->
-<section id="contact" class="section">
+<!-- -------- CONTACT -------- -->
+<section id="contact">
   <h2>Contact</h2>
-  <p>Email: <strong>rushwi.arelli@example.com</strong></p>
-  <p>LinkedIn: <strong>linkedin.com/in/rushwi-arelli</strong></p>
+
+  <div class="profile-pic"></div>
+
+  <p>Email: <a href="mailto:example@email.com" style="color:white;">example@email.com</a></p>
+
+  <div class="contact-icons">
+    <a href="#"><span>&#xf16d;</span> <!-- Instagram placeholder --></a>
+    <a href="#"><span>&#xf08c;</span> <!-- LinkedIn placeholder --></a>
+  </div>
 </section>
+
+<!-- -------- FOOTER -------- -->
+<footer>
+  © 2025 Rushwi Arelli — All rights reserved.
+</footer>
 
 </body>
 </html>
+
 
 
