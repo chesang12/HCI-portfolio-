@@ -6,24 +6,26 @@
 <title>Rushwi Arelli | HCI Portfolio</title>
 
 <style>
-  /* ---------- GENERAL STYLING ---------- */
+  /* ---------- GENERAL ---------- */
   body {
     margin: 0;
     font-family: "Poppins", sans-serif;
     background: linear-gradient(180deg, #d5b3ff, #6a1b9a, #000000);
     color: white;
-    text-align: center;
-    padding: 0;
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3 {
-    margin: 0;
-  }
+  h1, h2, h3 { margin: 0; }
 
-  /* ---------- HEADER ---------- */
-  header {
-    padding: 80px 20px 60px;
+  /* ---------- HERO / HEADER (CENTERED) ---------- */
+  #hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
   }
 
   h1 {
@@ -33,11 +35,7 @@
 
   p.subtitle {
     font-size: 1.4rem;
-    margin: 10px 0 20px;
-  }
-
-  nav {
-    margin-top: 25px;
+    margin: 12px 0 25px;
   }
 
   nav a {
@@ -56,7 +54,7 @@
     background: rgba(255,255,255,0.35);
   }
 
-  /* ---------- SECTION STYLING ---------- */
+  /* ---------- SECTIONS ---------- */
   section {
     width: 75%;
     max-width: 800px;
@@ -72,33 +70,23 @@
     font-size: 2rem;
     margin-bottom: 12px;
     border-bottom: 2px solid white;
-    display: inline-block;
     padding-bottom: 5px;
+    display: inline-block;
   }
 
-  section p, li {
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-
-  /* ---------- SKILLS COLUMNS ---------- */
+  /* ---------- SKILLS ---------- */
   .skills-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
-    margin-top: 15px;
   }
 
   .skills-container h3 {
     font-size: 1.4rem;
     font-weight: 600;
-    margin-bottom: 8px;
   }
 
-  ul {
-    margin-top: 0;
-    padding-left: 20px;
-  }
+  ul { padding-left: 20px; font-size: 1.2rem; }
 
   /* ---------- TIMELINE ---------- */
   .timeline {
@@ -134,44 +122,76 @@
     margin-top: 3px;
   }
 
-  /* ---------- CONTACT SECTION ---------- */
+  /* ---------- CONTACT ---------- */
   .profile-pic {
     width: 130px;
     height: 130px;
     border-radius: 50%;
     background: rgba(255,255,255,0.25);
-    display: block;
     margin: 0 auto 20px;
   }
 
-  .contact-icons a {
+  .contact-icons {
+    margin-top: 15px;
+  }
+
+  .contact-icons svg {
+    width: 35px;
+    height: 35px;
+    fill: white;
     margin-right: 15px;
-    font-size: 1.7rem;
-    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .contact-icons svg:hover {
+    fill: #d5b3ff;
+  }
+
+  /* Buttons for Resume + Portfolio */
+  .contact-buttons {
+    margin-top: 20px;
+  }
+
+  .contact-buttons a {
+    display: inline-block;
+    margin-right: 15px;
+    background: white;
+    color: #6a1b9a;
+    padding: 12px 22px;
+    border-radius: 25px;
     text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .contact-buttons a:hover {
+    background: #d5b3ff;
+    color: black;
   }
 
   /* ---------- FOOTER ---------- */
   footer {
     text-align: center;
     padding: 20px;
-    font-size: 1rem;
     opacity: 0.8;
-    margin-top: 40px;
+    font-size: 1rem;
+    margin-bottom: 20px;
   }
 
-  /* ---------- ANIMATIONS ---------- */
+  /* ---------- ANIMATION ---------- */
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
   }
-</style>
 
+</style>
 </head>
 
 <body>
 
-<header>
+<!-- -------- HERO (Center of Screen) -------- -->
+<div id="hero">
   <h1>Rushwi Arelli</h1>
   <p class="subtitle">Welcome to my Human–Computer Interaction Portfolio!</p>
 
@@ -181,14 +201,14 @@
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </nav>
-</header>
+</div>
 
 <!-- -------- ABOUT -------- -->
 <section id="about">
   <h2>About Me</h2>
   <p>
     I'm a passionate computer scientist focused on creating intuitive, user-centered digital experiences.
-    I love combining creativity with logic to design products that feel effortless and engaging.
+    I love combining creativity with logical problem-solving to design interfaces that feel seamless and meaningful.
   </p>
 </section>
 
@@ -219,36 +239,41 @@
   </div>
 </section>
 
-<!-- -------- EXPERIENCE / TIMELINE -------- -->
+<!-- -------- EXPERIENCE -------- -->
 <section id="experience">
   <h2>Experience</h2>
 
   <div class="timeline">
+    
+    <div class="timeline-item">
+      <div class="year">2018–2019</div>
+      <div class="exp-title">Early Exploration</div>
+      <p>Began exploring computational thinking and simple user-focused app concepts.</p>
+    </div>
 
     <div class="timeline-item">
       <div class="year">2019–2020</div>
       <div class="exp-title">Foundation Project</div>
-      <p>Explored early UX principles and basic programming fundamentals.</p>
+      <p>Studied basic UX principles and created my first interactive wireframe.</p>
     </div>
 
     <div class="timeline-item">
       <div class="year">2020–2022</div>
       <div class="exp-title">Project One</div>
-      <p>Built a small interactive interface as part of a mock product design process.</p>
+      <p>Developed a small interface prototype focused on usability and clarity.</p>
     </div>
 
     <div class="timeline-item">
       <div class="year">2022–2023</div>
       <div class="exp-title">Project Two</div>
-      <p>Worked on improving usability and accessibility in prototype screens.</p>
+      <p>Worked to improve accessibility and layout consistency in UI screens.</p>
     </div>
 
     <div class="timeline-item">
       <div class="year">2023–Present</div>
       <div class="exp-title">Ongoing HCI Work</div>
-      <p>Continuously exploring design methods, prototyping workflows, and user research techniques.</p>
+      <p>Continuously researching design patterns, prototyping tools, and user experience testing.</p>
     </div>
-
   </div>
 </section>
 
@@ -261,8 +286,28 @@
   <p>Email: <a href="mailto:example@email.com" style="color:white;">example@email.com</a></p>
 
   <div class="contact-icons">
-    <a href="#"><span>&#xf16d;</span> <!-- Instagram placeholder --></a>
-    <a href="#"><span>&#xf08c;</span> <!-- LinkedIn placeholder --></a>
+    <!-- Instagram SVG -->
+    <a href="https://instagram.com/example" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm11 2c1.7 0 3 1.3 3 3v10c0 
+3-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h11zm-5.5 3A5.5 5.5 0 107 12.5 5.5 5.5 
+0 0012.5 7zm0 2A3.5 3.5 0 119 12.5 3.5 3.5 0 0112.5 9zm4.3-.9a1.1 1.1 0 11-1.1 1.1 1.1 
+1.1 0 011.1-1.1z"/></svg>
+    </a>
+
+    <!-- LinkedIn SVG -->
+    <a href="https://www.linkedin.com/in/rushwi-arelli" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 2.8 
+2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM8 
+19H5V9h3v10zM6.5 7.7C5.4 7.7 4.5 6.8 4.5 5.7S5.4 
+3.7 6.5 3.7s2 0.9 2 2-0.9 2-2 2zM20 19h-3v-5.4c0-1.3-.5-2.1-1.6-2.1-0.9 
+0-1.5 0.6-1.7 1.3 0 0.2 0 0.5 0 0.7V19h-3V9h3v1.4c0.4-0.7 
+1.3-1.6 3-1.6 2.1 0 3.3 1.4 3.3 4.2V19z"/></svg>
+    </a>
+  </div>
+
+  <div class="contact-buttons">
+    <a href="#" target="_blank">View My Resume</a>
+    <a href="#" target="_blank">View My Portfolio</a>
   </div>
 </section>
 
@@ -273,6 +318,7 @@
 
 </body>
 </html>
+
 
 
 
