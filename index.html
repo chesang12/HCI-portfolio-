@@ -1,144 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rushwi Arelli | HCI Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #6a0dad, #8b5cf6); /* Purple gradient background */
-      color: white;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rushwi Arelli | HCI Portfolio</title>
 
-    header {
-      margin-top: 50px;
-      animation: fadeIn 2s ease-in-out;
-    }
+<style>
+/* -------------------- GLOBAL -------------------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #c3a3ff, #7a3df0, #1c0131);
+  color: white;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
+h2 {
+  text-decoration: underline;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
 
-    p.subtitle {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      margin-bottom: 40px;
-    }
+/* -------------------- HERO SECTION -------------------- */
+#hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
 
-    nav a {
-      text-decoration: none;
-      color: white;
-      background: rgba(255, 255, 255, 0.2);
-      padding: 10px 20px;
-      border-radius: 30px;
-      margin: 0 10px;
-      transition: background 0.3s ease;
-    }
+#hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+  animation: fadeIn 1.5s ease-in-out;
+}
 
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.4);
-    }
+#hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
 
-    section {
-      margin-top: 40px;
-      max-width: 900px;
-      text-align: left;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 10px;
-    }
+/* -------------------- MENU BUBBLES -------------------- */
+.menu-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+.menu-bubble {
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  animation: floatUp 1.5s ease forwards;
+  opacity: 0;
+}
 
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #fff;
-    }
+.menu-bubble:nth-child(1) { animation-delay: 0.4s; }
+.menu-bubble:nth-child(2) { animation-delay: 0.6s; }
+.menu-bubble:nth-child(3) { animation-delay: 0.8s; }
+.menu-bubble:nth-child(4) { animation-delay: 1s; }
 
-    footer a {
-      color: #ffcc00;
-      text-decoration: none;
-    }
+.menu-bubble:hover {
+  transform: scale(1.07);
+  background: rgba(255, 255, 255, 0.28);
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+/* -------------------- SECTIONS -------------------- */
+.section {
+  padding: 60px 20px;
+  min-height: 50vh;
+  max-width: 900px;
+  margin: auto;
+  background: rgba(255,255,255,0.12);
+  border-radius: 12px;
+  margin-bottom: 50px;
+  backdrop-filter: blur(6px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
 </head>
 <body>
 
-  <!-- Header with Name and Subtitle -->
-  <header>
-    <h1>Rushwi Arelli</h1>
-    <p class="subtitle">Welcome to my Human-Computer Interaction Portfolio</p>
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<!-- -------------------- HERO -------------------- -->
+<section id="hero">
+  <h1>Rushwi Arelli</h1>
+  <p>Welcome to my Human-Computer Interaction Portfolio!</p>
 
-  <!-- About Me Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I’m Rushwi Arelli, a passionate computer scientist with a focus on user-centered design and problem-solving. I specialize in full-stack web development and user interface design, with a strong interest in improving user experiences through innovative solutions. I am always seeking to expand my knowledge and skills in the realm of Human-Computer Interaction (HCI) and design thinking.</p>
-  </section>
+  <div class="menu-container">
+    <a href="#about" class="menu-bubble">About Me</a>
+    <a href="#skills" class="menu-bubble">Skills</a>
+    <a href="#experience" class="menu-bubble">Experience</a>
+    <a href="#contact" class="menu-bubble">Contact</a>
+  </div>
+</section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Programming Languages: Python, JavaScript, Java, C++</li>
-      <li>Web Development: HTML, CSS, React, Node.js, Django</li>
-      <li>UI/UX Design: Figma, Adobe XD, Sketch</li>
-      <li>Version Control: Git, GitHub</li>
-      <li>Problem Solving: Algorithms, Data Structures, Problem Analysis</li>
-      <li>Soft Skills: Communication, Teamwork, Critical Thinking</li>
-    </ul>
-  </section>
+<!-- -------------------- ABOUT -------------------- -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    I'm a computer scientist passionate about designing intuitive, user-centered digital experiences.
+  </p>
+</section>
 
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <p>Over the years, I have worked on various personal and academic projects, honing my skills in both software development and user-centered design. Below are a few examples:</p>
-    <ul>
-      <li><strong>Personal Portfolio Website:</strong> Designed and developed a responsive portfolio site using HTML, CSS, and JavaScript to showcase my work and skills.</li>
-      <li><strong>Task Management Application:</strong> Built a web-based task manager app using React, which allows users to create, manage, and track tasks effectively.</li>
-      <li><strong>Machine Learning Project:</strong> Developed a recommendation system using Python and TensorFlow, which provides personalized suggestions based on user preferences.</li>
-    </ul>
-  </section>
+<!-- -------------------- SKILLS -------------------- -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
+  <ul>
+    <li>Programming: Python, JavaScript, Java</li>
+    <li>Frontend: HTML, CSS, React</li>
+    <li>Design Tools: Figma, Adobe XD</li>
+    <li>Version Control: Git & GitHub</li>
+  </ul>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn:</p>
-    <ul>
-      <li>Email: rushwi.arelli@example.com</li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/rushwi-arelli" target="_blank">linkedin.com/in/rushwi-arelli</a></li>
-      <li>GitHub: <a href="https://github.com/rushwi-arelli" target="_blank">github.com/rushwi-arelli</a></li>
-    </ul>
-  </section>
+<!-- -------------------- EXPERIENCE -------------------- -->
+<section id="experience" class="section">
+  <h2>Experience</h2>
+  <ul>
+    <li>Built responsive web interfaces focusing on usability and accessibility.</li>
+    <li>Designed interactive prototypes in Figma for various user workflows.</li>
+    <li>Developed small web apps demonstrating UI principles and visual hierarchy.</li>
+  </ul>
+</section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2025 Rushwi Arelli. All rights reserved.</p>
-    <p>Design: <a href="https://html5up.net">HTML5 UP</a></p>
-  </footer>
+<!-- -------------------- CONTACT -------------------- -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: <strong>rushwi.arelli@example.com</strong></p>
+  <p>LinkedIn: <strong>linkedin.com/in/rushwi-arelli</strong></p>
+</section>
 
 </body>
 </html>
+
 
